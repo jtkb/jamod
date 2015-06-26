@@ -16,18 +16,17 @@
 
 package net.wimpi.modbus.io;
 
+import gnu.io.CommPort;
+import gnu.io.UnsupportedCommOperationException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import net.wimpi.modbus.Modbus;
 import net.wimpi.modbus.ModbusIOException;
 import net.wimpi.modbus.msg.ModbusMessage;
 import net.wimpi.modbus.msg.ModbusRequest;
 import net.wimpi.modbus.msg.ModbusResponse;
 import net.wimpi.modbus.util.ModbusUtil;
-
-import java.io.IOException;
-import javax.comm.CommPort;
-import java.io.InputStream;
-import java.io.OutputStream;
-import javax.comm.UnsupportedCommOperationException;
 
 /**
  * Abstract base class for serial <tt>ModbusTransport</tt>

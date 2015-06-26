@@ -16,10 +16,9 @@
 
 package net.wimpi.modbus.util;
 
-import net.wimpi.modbus.Modbus;
-
-import javax.comm.SerialPort;
+import gnu.io.SerialPort;
 import java.util.Properties;
+import net.wimpi.modbus.Modbus;
 
 /**
  * Helper class wrapping all serial port communication parameters.

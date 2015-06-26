@@ -16,15 +16,23 @@
 
 package net.wimpi.modbus.net;
 
-import net.wimpi.modbus.Modbus;
-import net.wimpi.modbus.io.*;
-import net.wimpi.modbus.util.SerialParameters;
-
-import javax.comm.*;
-
+import gnu.io.CommPortIdentifier;
+import gnu.io.NoSuchPortException;
+import gnu.io.PortInUseException;
+import gnu.io.SerialPort;
+import gnu.io.SerialPortEvent;
+import gnu.io.SerialPortEventListener;
+import gnu.io.UnsupportedCommOperationException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.TooManyListenersException;
+import net.wimpi.modbus.Modbus;
+import net.wimpi.modbus.io.ModbusASCIITransport;
+import net.wimpi.modbus.io.ModbusBINTransport;
+import net.wimpi.modbus.io.ModbusRTUTransport;
+import net.wimpi.modbus.io.ModbusSerialTransport;
+import net.wimpi.modbus.io.ModbusTransport;
+import net.wimpi.modbus.util.SerialParameters;
 
 /**
  * Class that implements a serial connection which
