@@ -46,14 +46,12 @@ public class ModbusSerialListener {
    */
   public ModbusSerialListener(SerialParameters params) {
     m_SerialCon = new SerialConnection(params);
-    //System.out.println("Created connection.");
-    listen();
   }//constructor
 
   /**
    * Listen to incoming messages.
    */
-  private void listen() {
+  public void listen() {
     try {
       m_Listening = true;
       m_SerialCon.open();
